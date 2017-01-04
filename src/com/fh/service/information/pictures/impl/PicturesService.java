@@ -27,6 +27,7 @@ public class PicturesService implements PicturesManager {
 	 * @return
 	 * @throws Exception
 	 */
+	
 	@SuppressWarnings("unchecked")
 	public List<PageData> list(Page page)throws Exception{
 		return (List<PageData>)dao.findForList("PicturesMapper.datalistPage", page);
