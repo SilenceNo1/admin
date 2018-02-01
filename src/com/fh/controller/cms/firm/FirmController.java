@@ -208,9 +208,4 @@ public class FirmController extends BaseController {
 		return mv;
 	}
 	
-	@InitBinder
-	public void initBinder(WebDataBinder binder){
-		DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-		binder.registerCustomEditor(Date.class, new CustomDateEditor(format,true));
-	}
 }
