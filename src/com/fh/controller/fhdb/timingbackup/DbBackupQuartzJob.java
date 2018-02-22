@@ -24,7 +24,6 @@ import com.fh.util.Tools;
  */
 public class DbBackupQuartzJob extends BaseController implements Job{
 
-	@Override
 	@SuppressWarnings("unchecked")
 	public void execute(JobExecutionContext context) throws JobExecutionException {
 		// TODO Auto-generated method stub

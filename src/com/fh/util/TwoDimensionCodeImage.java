@@ -17,17 +17,14 @@ public class TwoDimensionCodeImage implements QRCodeImage {
 		this.bufImg = bufImg;
 	}
 
-	@Override
 	public int getHeight() {
 		return bufImg.getHeight();
 	}
 
-	@Override
 	public int getPixel(int x, int y) {
 		return bufImg.getRGB(x, y);
 	}
 
-	@Override
 	public int getWidth() {
 		return bufImg.getWidth();
 	}

@@ -220,7 +220,6 @@ public class DbFH{
 		public DbBackUpCallable(String tableName){
 			this.tableName = tableName;
 		}
-		@Override
 		public Object call() {
 			try {
 				String remoteDB = pros.getProperty("remoteDB");			//是否远程备份数据库 yes or no
@@ -351,7 +350,6 @@ public class DbFH{
 			this.tableName = tableName;
 			this.sqlFilePath = sqlFilePath;
 		}
-		@Override
 		public Object call() {
 			try {
 				String remoteDB = pros.getProperty("remoteDB");			//是否远程还原数据库 yes or no
