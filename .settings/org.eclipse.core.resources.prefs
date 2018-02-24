@@ -8,3 +8,6 @@ encoding//WebRoot/WEB-INF/jsp/system/tools/twoDimensionCode.jsp=UTF-8
 encoding//resources/dbconfig.properties=UTF-8
 encoding//resources/dbfh.properties=UTF-8
 encoding//resources/redis.properties=UTF-8
+encoding/<project>=UTF-8
+encoding/resources=UTF-8
+encoding/src=UTF-8

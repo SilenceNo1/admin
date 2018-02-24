@@ -15,9 +15,7 @@ import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.net.ssl.HttpsURLConnection;
@@ -28,7 +26,6 @@ import javax.net.ssl.X509TrustManager;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.http.HttpResponse;
 import org.marker.weixin.DefaultSession;
 import org.marker.weixin.HandleMessageAdapter;
 import org.marker.weixin.MySecurity;
@@ -44,14 +41,11 @@ import org.marker.weixin.msg.Msg4Voice;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.alibaba.druid.support.json.JSONUtils;
-import com.alibaba.fastjson.JSON;
 import com.fh.controller.base.BaseController;
 import com.fh.service.weixin.command.CommandService;
 import com.fh.service.weixin.imgmsg.ImgmsgService;
 import com.fh.service.weixin.textmsg.TextmsgService;
 import com.fh.util.Const;
-import com.fh.util.HttpUtils;
 import com.fh.util.PageData;
 import com.fh.util.Tools;
 import com.fh.util.aliyun.AliyunUtils;

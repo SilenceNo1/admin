@@ -14,7 +14,6 @@ import java.util.Map;
 import org.apache.http.HttpResponse;
 import org.apache.http.util.EntityUtils;
 
-import com.alibaba.druid.support.json.JSONUtils;
 import com.fh.util.HttpUtils;
 
 import net.sf.json.JSONObject;
@@ -55,7 +54,7 @@ public class AliyunUtils {
 		return "对不起!你说啥我没听懂!";
 	}
 	public static void main(String[] args) {
-		JSONObject jsonObject = (JSONObject) JSONObject.fromObject(artificialIntelligence("北京天气")).get("result");  
-		System.out.println(jsonObject.get("content"));
+		JSONObject jsonObject =  JSONObject.fromObject(artificialIntelligence("查一下明天从北京到上海的南航机票"));  
+		System.out.println(jsonObject);
 	}
 }
