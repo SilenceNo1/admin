@@ -13,9 +13,31 @@
 		<webXmlPath>WebRoot/WEB-INF/web.xml</webXmlPath>
 	</properties>
 
-
+  <repositories>
+      <repository>
+        <id>sonatype-nexus-staging</id>
+        <name>Sonatype Nexus Staging</name>
+        <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        <releases>
+            <enabled>true</enabled>
+        </releases>
+        <snapshots>
+            <enabled>true</enabled>
+        </snapshots>
+      </repository>
+    </repositories>
 
 	<dependencies>
+	 <dependency>
+    <groupId>com.aliyun</groupId>
+    <artifactId>aliyun-java-sdk-core</artifactId>
+    <version>3.2.2</version>
+  </dependency>
+  <dependency>
+    <groupId>com.aliyun</groupId>
+    <artifactId>aliyun-java-sdk-vod</artifactId>
+    <version>2.7.0</version>
+  </dependency>
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>

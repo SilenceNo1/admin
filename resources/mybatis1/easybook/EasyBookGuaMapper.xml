@@ -1,30 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="FirmMapper">
+<mapper namespace="EasyBookGuaMapper">
 	
 	<!--表名 -->
 	<sql id="tableName">
-		FIRM
+		EASYBOOKGUA
 	</sql>
 	
 	<!-- 字段 -->
 	<sql id="Field">
 		ID,	
+		GUA_CODE,	
 		NAME,	
-		SHORT_NAME,	
-		CREATED,	
-		UPDATED,	
-		FIRM_ID
+		TITLE,	
+		QUICK_JUDGE_IMG,	
+		TITLE_IMG,	
+		ORIGIN_CONTENT,	
+		EXPLAIN_CONTENT,	
+		PICTURE_CONTENT,	
+		EXPLAIN_PICTURE_CONTENT,	
+		MODERN_EXPLAIN_CONTENT,	
+		MODERN_EXPLAIN_PICTURE_CONTENT,	
+		ENLIGHTENMENT,	
+		MODERN_EXPLAIN_GUA,	
+		DUAN_YI_TIAN_JI,	
+		DUAN_YI_TIAN_JI_IMG,	
+		MAIN_IDEA,	
+		STORY,	
+		CREATE_TIME,	
+		UPDATE_TIME,	
+		EASYBOOKGUA_ID
 	</sql>
 	
 	<!-- 字段值 -->
 	<sql id="FieldValue">
 		#{ID},	
+		#{GUA_CODE},	
 		#{NAME},	
-		#{SHORT_NAME},	
-		#{CREATED},	
-		#{UPDATED},	
-		#{FIRM_ID}
+		#{TITLE},	
+		#{QUICK_JUDGE_IMG},	
+		#{TITLE_IMG},	
+		#{ORIGIN_CONTENT},	
+		#{EXPLAIN_CONTENT},	
+		#{PICTURE_CONTENT},	
+		#{EXPLAIN_PICTURE_CONTENT},	
+		#{MODERN_EXPLAIN_CONTENT},	
+		#{MODERN_EXPLAIN_PICTURE_CONTENT},	
+		#{ENLIGHTENMENT},	
+		#{MODERN_EXPLAIN_GUA},	
+		#{DUAN_YI_TIAN_JI},	
+		#{DUAN_YI_TIAN_JI_IMG},	
+		#{MAIN_IDEA},	
+		#{STORY},	
+		#{CREATE_TIME},	
+		#{UPDATE_TIME},	
+		#{EASYBOOKGUA_ID}
 	</sql>
 	
 	<!-- 新增-->
@@ -43,7 +73,7 @@
 		delete from
 		<include refid="tableName"></include>
 		where 
-			FIRM_ID = #{FIRM_ID}
+			EASYBOOKGUA_ID = #{EASYBOOKGUA_ID}
 	</delete>
 	
 	<!-- 修改 -->
@@ -51,11 +81,29 @@
 		update
 		<include refid="tableName"></include>
 		set 
+			ID = #{ID},
+			GUA_CODE = #{GUA_CODE},
 			NAME = #{NAME},
-			SHORT_NAME = #{SHORT_NAME},
-		FIRM_ID = FIRM_ID
+			TITLE = #{TITLE},
+			QUICK_JUDGE_IMG = #{QUICK_JUDGE_IMG},
+			TITLE_IMG = #{TITLE_IMG},
+			ORIGIN_CONTENT = #{ORIGIN_CONTENT},
+			EXPLAIN_CONTENT = #{EXPLAIN_CONTENT},
+			PICTURE_CONTENT = #{PICTURE_CONTENT},
+			EXPLAIN_PICTURE_CONTENT = #{EXPLAIN_PICTURE_CONTENT},
+			MODERN_EXPLAIN_CONTENT = #{MODERN_EXPLAIN_CONTENT},
+			MODERN_EXPLAIN_PICTURE_CONTENT = #{MODERN_EXPLAIN_PICTURE_CONTENT},
+			ENLIGHTENMENT = #{ENLIGHTENMENT},
+			MODERN_EXPLAIN_GUA = #{MODERN_EXPLAIN_GUA},
+			DUAN_YI_TIAN_JI = #{DUAN_YI_TIAN_JI},
+			DUAN_YI_TIAN_JI_IMG = #{DUAN_YI_TIAN_JI_IMG},
+			MAIN_IDEA = #{MAIN_IDEA},
+			STORY = #{STORY},
+			CREATE_TIME = #{CREATE_TIME},
+			UPDATE_TIME = #{UPDATE_TIME},
+		EASYBOOKGUA_ID = EASYBOOKGUA_ID
 		where 
-		FIRM_ID = #{FIRM_ID}
+		EASYBOOKGUA_ID = #{EASYBOOKGUA_ID}
 	</update>
 	
 	<!-- 通过ID获取数据 -->
@@ -65,7 +113,7 @@
 		from 
 		<include refid="tableName"></include>
 		where 
-			FIRM_ID = #{FIRM_ID}
+			EASYBOOKGUA_ID = #{EASYBOOKGUA_ID}
 	</select>
 	
 	<!-- 列表 -->
@@ -100,7 +148,7 @@
 		delete from
 		<include refid="tableName"></include>
 		where 
-			FIRM_ID in
+			EASYBOOKGUA_ID in
 		<foreach item="item" index="index" collection="array" open="(" separator="," close=")">
                  #{item}
 		</foreach>
