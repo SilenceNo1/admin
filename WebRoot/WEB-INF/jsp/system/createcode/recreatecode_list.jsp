@@ -56,7 +56,7 @@
 														</select>
 													</td>
 													<td>&nbsp;地址：</td>
-													<td><input type="text" name="dbAddress" id="dbAddress" value="localhost" maxlength="200" placeholder="数据库连接地址" title="数据库连接地址"/></td>
+													<td><input type="text" name="dbAddress" id="dbAddress" value="139.224.117.116" maxlength="200" placeholder="数据库连接地址" title="数据库连接地址"/></td>
 													<td>&nbsp;端口：</td>
 													<td><input type="number" name="dbport" id="dbport" value="3306"  maxlength="10" placeholder="输入端口" title="端口"/></td>
 												</tr>

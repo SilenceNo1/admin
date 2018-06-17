@@ -99,7 +99,7 @@
 					<form action="createCode/proCode.do" name="Form" id="Form" method="post">
 						<input type="hidden" name="zindex" id="zindex" value="0">
 						<input type="hidden" name="FIELDLIST" id="FIELDLIST" value="">
-						<input type="hidden" name="faobject" id="faobject" value="">
+						<input type="hidden" name="faobject" id="faobject" value="${table}">
 						<div id="zhongxin">
 						<table style="margin-top: 10px;">
 							<tr>

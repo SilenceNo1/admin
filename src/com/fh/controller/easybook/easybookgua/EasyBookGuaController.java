@@ -1,4 +1,4 @@
-package com.fh.controller.easybook;
+package com.fh.controller.easybook.easybookgua;
 
 import java.io.PrintWriter;
 import java.text.DateFormat;
@@ -8,9 +8,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import javax.annotation.Resource;
-
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.WebDataBinder;
@@ -18,19 +16,19 @@ import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
-
 import com.fh.controller.base.BaseController;
 import com.fh.entity.Page;
-import com.fh.service.easybook.EasyBookGuaManager;
 import com.fh.util.AppUtil;
-import com.fh.util.Jurisdiction;
 import com.fh.util.ObjectExcelView;
 import com.fh.util.PageData;
+import com.fh.util.Jurisdiction;
+import com.fh.util.Tools;
+import com.fh.service.easybook.easybookgua.EasyBookGuaManager;
 
 /** 
  * 说明：挂
  * 创建人：Silence13161618211
- * 创建时间：2018-06-15
+ * 创建时间：2018-06-16
  */
 @Controller
 @RequestMapping(value="/easybookgua")
@@ -51,7 +49,8 @@ public class EasyBookGuaController extends BaseController {
 		ModelAndView mv = this.getModelAndView();
 		PageData pd = new PageData();
 		pd = this.getPageData();
-		pd.put("EASYBOOKGUA_ID", this.get32UUID());	//主键
+		pd.put("CREATE_TIME", Tools.date2Str(new Date()));	//create_time
+		pd.put("UPDATE_TIME", Tools.date2Str(new Date()));	//update_time
 		easybookguaService.save(pd);
 		mv.addObject("msg","success");
 		mv.setViewName("save_result");
@@ -184,26 +183,26 @@ public class EasyBookGuaController extends BaseController {
 		pd = this.getPageData();
 		Map<String,Object> dataMap = new HashMap<String,Object>();
 		List<String> titles = new ArrayList<String>();
-		titles.add("备注1");	//1
-		titles.add("备注2");	//2
-		titles.add("备注3");	//3
-		titles.add("备注4");	//4
-		titles.add("备注5");	//5
-		titles.add("备注6");	//6
-		titles.add("备注7");	//7
-		titles.add("备注8");	//8
-		titles.add("备注9");	//9
-		titles.add("备注10");	//10
-		titles.add("备注11");	//11
-		titles.add("备注12");	//12
-		titles.add("备注13");	//13
-		titles.add("备注14");	//14
-		titles.add("备注15");	//15
-		titles.add("备注16");	//16
-		titles.add("备注17");	//17
-		titles.add("备注18");	//18
-		titles.add("备注19");	//19
-		titles.add("备注20");	//20
+		titles.add("id");	//1
+		titles.add("gua_code");	//2
+		titles.add("name");	//3
+		titles.add("title");	//4
+		titles.add("quick_judge_img");	//5
+		titles.add("title_img");	//6
+		titles.add("origin_content");	//7
+		titles.add("explain_content");	//8
+		titles.add("picture_content");	//9
+		titles.add("explain_picture_content");	//10
+		titles.add("modern_explain_content");	//11
+		titles.add("modern_explain_picture_content");	//12
+		titles.add("enlightenment");	//13
+		titles.add("modern_explain_gua");	//14
+		titles.add("duan_yi_tian_ji");	//15
+		titles.add("duan_yi_tian_ji_img");	//16
+		titles.add("main_idea");	//17
+		titles.add("story");	//18
+		titles.add("create_time");	//19
+		titles.add("update_time");	//20
 		dataMap.put("titles", titles);
 		List<PageData> varOList = easybookguaService.listAll(pd);
 		List<PageData> varList = new ArrayList<PageData>();

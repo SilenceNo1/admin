@@ -67,26 +67,26 @@
 									<label class="pos-rel"><input type="checkbox" class="ace" id="zcheckbox" /><span class="lbl"></span></label>
 									</th>
 									<th class="center" style="width:50px;">序号</th>
-									<th class="center">备注1</th>
-									<th class="center">备注2</th>
-									<th class="center">备注3</th>
-									<th class="center">备注4</th>
-									<th class="center">备注5</th>
-									<th class="center">备注6</th>
-									<th class="center">备注7</th>
-									<th class="center">备注8</th>
-									<th class="center">备注9</th>
-									<th class="center">备注10</th>
-									<th class="center">备注11</th>
-									<th class="center">备注12</th>
-									<th class="center">备注13</th>
-									<th class="center">备注14</th>
-									<th class="center">备注15</th>
-									<th class="center">备注16</th>
-									<th class="center">备注17</th>
-									<th class="center">备注18</th>
-									<th class="center">备注19</th>
-									<th class="center">备注20</th>
+									<th class="center">id</th>
+									<th class="center">gua_code</th>
+									<th class="center">name</th>
+									<th class="center">title</th>
+									<th class="center">quick_judge_img</th>
+									<th class="center">title_img</th>
+									<th class="center">origin_content</th>
+									<th class="center">explain_content</th>
+									<th class="center">picture_content</th>
+									<th class="center">explain_picture_content</th>
+									<th class="center">modern_explain_content</th>
+									<th class="center">modern_explain_picture_content</th>
+									<th class="center">enlightenment</th>
+									<th class="center">modern_explain_gua</th>
+									<th class="center">duan_yi_tian_ji</th>
+									<th class="center">duan_yi_tian_ji_img</th>
+									<th class="center">main_idea</th>
+									<th class="center">story</th>
+									<th class="center">create_time</th>
+									<th class="center">update_time</th>
 									<th class="center">操作</th>
 								</tr>
 							</thead>

@@ -32,84 +32,72 @@
 						<div id="zhongxin" style="padding-top: 13px;">
 						<table id="table_report" class="table table-striped table-bordered table-hover">
 							<tr>
-								<td style="width:75px;text-align: right;padding-top: 13px;">备注1:</td>
-								<td><input type="number" name="ID" id="ID" value="${pd.ID}" maxlength="32" placeholder="这里输入备注1" title="备注1" style="width:98%;"/></td>
+								<td style="width:75px;text-align: right;padding-top: 13px;">gua_code:</td>
+								<td><input type="text" name="GUA_CODE" id="GUA_CODE" value="${pd.GUA_CODE}" maxlength="6" placeholder="这里输入gua_code" title="gua_code" style="width:98%;"/></td>
 							</tr>
 							<tr>
-								<td style="width:75px;text-align: right;padding-top: 13px;">备注2:</td>
-								<td><input type="text" name="GUA_CODE" id="GUA_CODE" value="${pd.GUA_CODE}" maxlength="6" placeholder="这里输入备注2" title="备注2" style="width:98%;"/></td>
+								<td style="width:75px;text-align: right;padding-top: 13px;">name:</td>
+								<td><input type="text" name="NAME" id="NAME" value="${pd.NAME}" maxlength="255" placeholder="这里输入name" title="name" style="width:98%;"/></td>
 							</tr>
 							<tr>
-								<td style="width:75px;text-align: right;padding-top: 13px;">备注3:</td>
-								<td><input type="text" name="NAME" id="NAME" value="${pd.NAME}" maxlength="255" placeholder="这里输入备注3" title="备注3" style="width:98%;"/></td>
+								<td style="width:75px;text-align: right;padding-top: 13px;">title:</td>
+								<td><input type="text" name="TITLE" id="TITLE" value="${pd.TITLE}" maxlength="255" placeholder="这里输入title" title="title" style="width:98%;"/></td>
 							</tr>
 							<tr>
-								<td style="width:75px;text-align: right;padding-top: 13px;">备注4:</td>
-								<td><input type="text" name="TITLE" id="TITLE" value="${pd.TITLE}" maxlength="255" placeholder="这里输入备注4" title="备注4" style="width:98%;"/></td>
+								<td style="width:75px;text-align: right;padding-top: 13px;">quick_judge_img:</td>
+								<td><input type="text" name="QUICK_JUDGE_IMG" id="QUICK_JUDGE_IMG" value="${pd.QUICK_JUDGE_IMG}" maxlength="255" placeholder="这里输入quick_judge_img" title="quick_judge_img" style="width:98%;"/></td>
 							</tr>
 							<tr>
-								<td style="width:75px;text-align: right;padding-top: 13px;">备注5:</td>
-								<td><input type="text" name="QUICK_JUDGE_IMG" id="QUICK_JUDGE_IMG" value="${pd.QUICK_JUDGE_IMG}" maxlength="255" placeholder="这里输入备注5" title="备注5" style="width:98%;"/></td>
+								<td style="width:75px;text-align: right;padding-top: 13px;">title_img:</td>
+								<td><input type="text" name="TITLE_IMG" id="TITLE_IMG" value="${pd.TITLE_IMG}" maxlength="255" placeholder="这里输入title_img" title="title_img" style="width:98%;"/></td>
 							</tr>
 							<tr>
-								<td style="width:75px;text-align: right;padding-top: 13px;">备注6:</td>
-								<td><input type="text" name="TITLE_IMG" id="TITLE_IMG" value="${pd.TITLE_IMG}" maxlength="255" placeholder="这里输入备注6" title="备注6" style="width:98%;"/></td>
+								<td style="width:75px;text-align: right;padding-top: 13px;">origin_content:</td>
+								<td><input type="text" name="ORIGIN_CONTENT" id="ORIGIN_CONTENT" value="${pd.ORIGIN_CONTENT}" maxlength="255" placeholder="这里输入origin_content" title="origin_content" style="width:98%;"/></td>
 							</tr>
 							<tr>
-								<td style="width:75px;text-align: right;padding-top: 13px;">备注7:</td>
-								<td><input type="text" name="ORIGIN_CONTENT" id="ORIGIN_CONTENT" value="${pd.ORIGIN_CONTENT}" maxlength="255" placeholder="这里输入备注7" title="备注7" style="width:98%;"/></td>
+								<td style="width:75px;text-align: right;padding-top: 13px;">explain_content:</td>
+								<td><input type="text" name="EXPLAIN_CONTENT" id="EXPLAIN_CONTENT" value="${pd.EXPLAIN_CONTENT}" maxlength="255" placeholder="这里输入explain_content" title="explain_content" style="width:98%;"/></td>
 							</tr>
 							<tr>
-								<td style="width:75px;text-align: right;padding-top: 13px;">备注8:</td>
-								<td><input type="text" name="EXPLAIN_CONTENT" id="EXPLAIN_CONTENT" value="${pd.EXPLAIN_CONTENT}" maxlength="255" placeholder="这里输入备注8" title="备注8" style="width:98%;"/></td>
+								<td style="width:75px;text-align: right;padding-top: 13px;">picture_content:</td>
+								<td><input type="text" name="PICTURE_CONTENT" id="PICTURE_CONTENT" value="${pd.PICTURE_CONTENT}" maxlength="255" placeholder="这里输入picture_content" title="picture_content" style="width:98%;"/></td>
 							</tr>
 							<tr>
-								<td style="width:75px;text-align: right;padding-top: 13px;">备注9:</td>
-								<td><input type="text" name="PICTURE_CONTENT" id="PICTURE_CONTENT" value="${pd.PICTURE_CONTENT}" maxlength="255" placeholder="这里输入备注9" title="备注9" style="width:98%;"/></td>
+								<td style="width:75px;text-align: right;padding-top: 13px;">explain_picture_content:</td>
+								<td><input type="text" name="EXPLAIN_PICTURE_CONTENT" id="EXPLAIN_PICTURE_CONTENT" value="${pd.EXPLAIN_PICTURE_CONTENT}" maxlength="255" placeholder="这里输入explain_picture_content" title="explain_picture_content" style="width:98%;"/></td>
 							</tr>
 							<tr>
-								<td style="width:75px;text-align: right;padding-top: 13px;">备注10:</td>
-								<td><input type="text" name="EXPLAIN_PICTURE_CONTENT" id="EXPLAIN_PICTURE_CONTENT" value="${pd.EXPLAIN_PICTURE_CONTENT}" maxlength="255" placeholder="这里输入备注10" title="备注10" style="width:98%;"/></td>
+								<td style="width:75px;text-align: right;padding-top: 13px;">modern_explain_content:</td>
+								<td><input type="text" name="MODERN_EXPLAIN_CONTENT" id="MODERN_EXPLAIN_CONTENT" value="${pd.MODERN_EXPLAIN_CONTENT}" maxlength="255" placeholder="这里输入modern_explain_content" title="modern_explain_content" style="width:98%;"/></td>
 							</tr>
 							<tr>
-								<td style="width:75px;text-align: right;padding-top: 13px;">备注11:</td>
-								<td><input type="text" name="MODERN_EXPLAIN_CONTENT" id="MODERN_EXPLAIN_CONTENT" value="${pd.MODERN_EXPLAIN_CONTENT}" maxlength="255" placeholder="这里输入备注11" title="备注11" style="width:98%;"/></td>
+								<td style="width:75px;text-align: right;padding-top: 13px;">modern_explain_picture_content:</td>
+								<td><input type="text" name="MODERN_EXPLAIN_PICTURE_CONTENT" id="MODERN_EXPLAIN_PICTURE_CONTENT" value="${pd.MODERN_EXPLAIN_PICTURE_CONTENT}" maxlength="255" placeholder="这里输入modern_explain_picture_content" title="modern_explain_picture_content" style="width:98%;"/></td>
 							</tr>
 							<tr>
-								<td style="width:75px;text-align: right;padding-top: 13px;">备注12:</td>
-								<td><input type="text" name="MODERN_EXPLAIN_PICTURE_CONTENT" id="MODERN_EXPLAIN_PICTURE_CONTENT" value="${pd.MODERN_EXPLAIN_PICTURE_CONTENT}" maxlength="255" placeholder="这里输入备注12" title="备注12" style="width:98%;"/></td>
+								<td style="width:75px;text-align: right;padding-top: 13px;">enlightenment:</td>
+								<td><input type="text" name="ENLIGHTENMENT" id="ENLIGHTENMENT" value="${pd.ENLIGHTENMENT}" maxlength="255" placeholder="这里输入enlightenment" title="enlightenment" style="width:98%;"/></td>
 							</tr>
 							<tr>
-								<td style="width:75px;text-align: right;padding-top: 13px;">备注13:</td>
-								<td><input type="text" name="ENLIGHTENMENT" id="ENLIGHTENMENT" value="${pd.ENLIGHTENMENT}" maxlength="255" placeholder="这里输入备注13" title="备注13" style="width:98%;"/></td>
+								<td style="width:75px;text-align: right;padding-top: 13px;">modern_explain_gua:</td>
+								<td><input type="text" name="MODERN_EXPLAIN_GUA" id="MODERN_EXPLAIN_GUA" value="${pd.MODERN_EXPLAIN_GUA}" maxlength="255" placeholder="这里输入modern_explain_gua" title="modern_explain_gua" style="width:98%;"/></td>
 							</tr>
 							<tr>
-								<td style="width:75px;text-align: right;padding-top: 13px;">备注14:</td>
-								<td><input type="text" name="MODERN_EXPLAIN_GUA" id="MODERN_EXPLAIN_GUA" value="${pd.MODERN_EXPLAIN_GUA}" maxlength="255" placeholder="这里输入备注14" title="备注14" style="width:98%;"/></td>
+								<td style="width:75px;text-align: right;padding-top: 13px;">duan_yi_tian_ji:</td>
+								<td><input type="text" name="DUAN_YI_TIAN_JI" id="DUAN_YI_TIAN_JI" value="${pd.DUAN_YI_TIAN_JI}" maxlength="255" placeholder="这里输入duan_yi_tian_ji" title="duan_yi_tian_ji" style="width:98%;"/></td>
 							</tr>
 							<tr>
-								<td style="width:75px;text-align: right;padding-top: 13px;">备注15:</td>
-								<td><input type="text" name="DUAN_YI_TIAN_JI" id="DUAN_YI_TIAN_JI" value="${pd.DUAN_YI_TIAN_JI}" maxlength="255" placeholder="这里输入备注15" title="备注15" style="width:98%;"/></td>
+								<td style="width:75px;text-align: right;padding-top: 13px;">duan_yi_tian_ji_img:</td>
+								<td><input type="text" name="DUAN_YI_TIAN_JI_IMG" id="DUAN_YI_TIAN_JI_IMG" value="${pd.DUAN_YI_TIAN_JI_IMG}" maxlength="255" placeholder="这里输入duan_yi_tian_ji_img" title="duan_yi_tian_ji_img" style="width:98%;"/></td>
 							</tr>
 							<tr>
-								<td style="width:75px;text-align: right;padding-top: 13px;">备注16:</td>
-								<td><input type="text" name="DUAN_YI_TIAN_JI_IMG" id="DUAN_YI_TIAN_JI_IMG" value="${pd.DUAN_YI_TIAN_JI_IMG}" maxlength="255" placeholder="这里输入备注16" title="备注16" style="width:98%;"/></td>
+								<td style="width:75px;text-align: right;padding-top: 13px;">main_idea:</td>
+								<td><input type="text" name="MAIN_IDEA" id="MAIN_IDEA" value="${pd.MAIN_IDEA}" maxlength="255" placeholder="这里输入main_idea" title="main_idea" style="width:98%;"/></td>
 							</tr>
 							<tr>
-								<td style="width:75px;text-align: right;padding-top: 13px;">备注17:</td>
-								<td><input type="text" name="MAIN_IDEA" id="MAIN_IDEA" value="${pd.MAIN_IDEA}" maxlength="255" placeholder="这里输入备注17" title="备注17" style="width:98%;"/></td>
-							</tr>
-							<tr>
-								<td style="width:75px;text-align: right;padding-top: 13px;">备注18:</td>
-								<td><input type="text" name="STORY" id="STORY" value="${pd.STORY}" maxlength="255" placeholder="这里输入备注18" title="备注18" style="width:98%;"/></td>
-							</tr>
-							<tr>
-								<td style="width:75px;text-align: right;padding-top: 13px;">备注19:</td>
-								<td><input class="span10 date-picker" name="CREATE_TIME" id="CREATE_TIME" value="${pd.CREATE_TIME}" type="text" data-date-format="yyyy-mm-dd" readonly="readonly" placeholder="备注19" title="备注19" style="width:98%;"/></td>
-							</tr>
-							<tr>
-								<td style="width:75px;text-align: right;padding-top: 13px;">备注20:</td>
-								<td><input class="span10 date-picker" name="UPDATE_TIME" id="UPDATE_TIME" value="${pd.UPDATE_TIME}" type="text" data-date-format="yyyy-mm-dd" readonly="readonly" placeholder="备注20" title="备注20" style="width:98%;"/></td>
+								<td style="width:75px;text-align: right;padding-top: 13px;">story:</td>
+								<td><input type="text" name="STORY" id="STORY" value="${pd.STORY}" maxlength="255" placeholder="这里输入story" title="story" style="width:98%;"/></td>
 							</tr>
 							<tr>
 								<td style="text-align: center;" colspan="10">
@@ -146,20 +134,10 @@
 		$(top.hangge());
 		//保存
 		function save(){
-			if($("#ID").val()==""){
-				$("#ID").tips({
-					side:3,
-		            msg:'请输入备注1',
-		            bg:'#AE81FF',
-		            time:2
-		        });
-				$("#ID").focus();
-			return false;
-			}
 			if($("#GUA_CODE").val()==""){
 				$("#GUA_CODE").tips({
 					side:3,
-		            msg:'请输入备注2',
+		            msg:'请输入gua_code',
 		            bg:'#AE81FF',
 		            time:2
 		        });
@@ -169,7 +147,7 @@
 			if($("#NAME").val()==""){
 				$("#NAME").tips({
 					side:3,
-		            msg:'请输入备注3',
+		            msg:'请输入name',
 		            bg:'#AE81FF',
 		            time:2
 		        });
@@ -179,7 +157,7 @@
 			if($("#TITLE").val()==""){
 				$("#TITLE").tips({
 					side:3,
-		            msg:'请输入备注4',
+		            msg:'请输入title',
 		            bg:'#AE81FF',
 		            time:2
 		        });
@@ -189,7 +167,7 @@
 			if($("#QUICK_JUDGE_IMG").val()==""){
 				$("#QUICK_JUDGE_IMG").tips({
 					side:3,
-		            msg:'请输入备注5',
+		            msg:'请输入quick_judge_img',
 		            bg:'#AE81FF',
 		            time:2
 		        });
@@ -199,7 +177,7 @@
 			if($("#TITLE_IMG").val()==""){
 				$("#TITLE_IMG").tips({
 					side:3,
-		            msg:'请输入备注6',
+		            msg:'请输入title_img',
 		            bg:'#AE81FF',
 		            time:2
 		        });
@@ -209,7 +187,7 @@
 			if($("#ORIGIN_CONTENT").val()==""){
 				$("#ORIGIN_CONTENT").tips({
 					side:3,
-		            msg:'请输入备注7',
+		            msg:'请输入origin_content',
 		            bg:'#AE81FF',
 		            time:2
 		        });
@@ -219,7 +197,7 @@
 			if($("#EXPLAIN_CONTENT").val()==""){
 				$("#EXPLAIN_CONTENT").tips({
 					side:3,
-		            msg:'请输入备注8',
+		            msg:'请输入explain_content',
 		            bg:'#AE81FF',
 		            time:2
 		        });
@@ -229,7 +207,7 @@
 			if($("#PICTURE_CONTENT").val()==""){
 				$("#PICTURE_CONTENT").tips({
 					side:3,
-		            msg:'请输入备注9',
+		            msg:'请输入picture_content',
 		            bg:'#AE81FF',
 		            time:2
 		        });
@@ -239,7 +217,7 @@
 			if($("#EXPLAIN_PICTURE_CONTENT").val()==""){
 				$("#EXPLAIN_PICTURE_CONTENT").tips({
 					side:3,
-		            msg:'请输入备注10',
+		            msg:'请输入explain_picture_content',
 		            bg:'#AE81FF',
 		            time:2
 		        });
@@ -249,7 +227,7 @@
 			if($("#MODERN_EXPLAIN_CONTENT").val()==""){
 				$("#MODERN_EXPLAIN_CONTENT").tips({
 					side:3,
-		            msg:'请输入备注11',
+		            msg:'请输入modern_explain_content',
 		            bg:'#AE81FF',
 		            time:2
 		        });
@@ -259,7 +237,7 @@
 			if($("#MODERN_EXPLAIN_PICTURE_CONTENT").val()==""){
 				$("#MODERN_EXPLAIN_PICTURE_CONTENT").tips({
 					side:3,
-		            msg:'请输入备注12',
+		            msg:'请输入modern_explain_picture_content',
 		            bg:'#AE81FF',
 		            time:2
 		        });
@@ -269,7 +247,7 @@
 			if($("#ENLIGHTENMENT").val()==""){
 				$("#ENLIGHTENMENT").tips({
 					side:3,
-		            msg:'请输入备注13',
+		            msg:'请输入enlightenment',
 		            bg:'#AE81FF',
 		            time:2
 		        });
@@ -279,7 +257,7 @@
 			if($("#MODERN_EXPLAIN_GUA").val()==""){
 				$("#MODERN_EXPLAIN_GUA").tips({
 					side:3,
-		            msg:'请输入备注14',
+		            msg:'请输入modern_explain_gua',
 		            bg:'#AE81FF',
 		            time:2
 		        });
@@ -289,7 +267,7 @@
 			if($("#DUAN_YI_TIAN_JI").val()==""){
 				$("#DUAN_YI_TIAN_JI").tips({
 					side:3,
-		            msg:'请输入备注15',
+		            msg:'请输入duan_yi_tian_ji',
 		            bg:'#AE81FF',
 		            time:2
 		        });
@@ -299,7 +277,7 @@
 			if($("#DUAN_YI_TIAN_JI_IMG").val()==""){
 				$("#DUAN_YI_TIAN_JI_IMG").tips({
 					side:3,
-		            msg:'请输入备注16',
+		            msg:'请输入duan_yi_tian_ji_img',
 		            bg:'#AE81FF',
 		            time:2
 		        });
@@ -309,7 +287,7 @@
 			if($("#MAIN_IDEA").val()==""){
 				$("#MAIN_IDEA").tips({
 					side:3,
-		            msg:'请输入备注17',
+		            msg:'请输入main_idea',
 		            bg:'#AE81FF',
 		            time:2
 		        });
@@ -319,31 +297,11 @@
 			if($("#STORY").val()==""){
 				$("#STORY").tips({
 					side:3,
-		            msg:'请输入备注18',
+		            msg:'请输入story',
 		            bg:'#AE81FF',
 		            time:2
 		        });
 				$("#STORY").focus();
-			return false;
-			}
-			if($("#CREATE_TIME").val()==""){
-				$("#CREATE_TIME").tips({
-					side:3,
-		            msg:'请输入备注19',
-		            bg:'#AE81FF',
-		            time:2
-		        });
-				$("#CREATE_TIME").focus();
-			return false;
-			}
-			if($("#UPDATE_TIME").val()==""){
-				$("#UPDATE_TIME").tips({
-					side:3,
-		            msg:'请输入备注20',
-		            bg:'#AE81FF',
-		            time:2
-		        });
-				$("#UPDATE_TIME").focus();
 			return false;
 			}
 			$("#Form").submit();

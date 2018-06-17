@@ -105,7 +105,7 @@ public class ReverseCreateCodeController extends BaseController {
 				sb.append("String");
 			}
 			sb.append(",fh,");
-			sb.append("备注"+(i+1));														//备注
+			sb.append(fmap.get("fieldNanme").toString());												//备注
 			sb.append(",fh,");
 			sb.append("是");																//是否前台录入
 			sb.append(",fh,");
@@ -118,6 +118,8 @@ public class ReverseCreateCodeController extends BaseController {
 		}
 		pd.put("FIELDLIST", sb.toString());
 		mv.addObject("msg", "edit");
+		mv.addObject("table", pd.getString("table"));
+		
 		mv.addObject("pd", pd);
 		mv.setViewName("system/createcode/productCode");
 		return mv;

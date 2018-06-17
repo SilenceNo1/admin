@@ -4,7 +4,7 @@
 	
 	<!--表名 -->
 	<sql id="tableName">
-		EASYBOOKGUA
+		EASY_BOOK_GUA
 	</sql>
 	
 	<!-- 字段 -->
@@ -28,8 +28,7 @@
 		MAIN_IDEA,	
 		STORY,	
 		CREATE_TIME,	
-		UPDATE_TIME,	
-		EASYBOOKGUA_ID
+		UPDATE_TIME 
 	</sql>
 	
 	<!-- 字段值 -->
@@ -53,8 +52,7 @@
 		#{MAIN_IDEA},	
 		#{STORY},	
 		#{CREATE_TIME},	
-		#{UPDATE_TIME},	
-		#{EASYBOOKGUA_ID}
+		#{UPDATE_TIME} 
 	</sql>
 	
 	<!-- 新增-->
@@ -73,7 +71,7 @@
 		delete from
 		<include refid="tableName"></include>
 		where 
-			EASYBOOKGUA_ID = #{EASYBOOKGUA_ID}
+			ID = #{ID}
 	</delete>
 	
 	<!-- 修改 -->
@@ -98,12 +96,9 @@
 			DUAN_YI_TIAN_JI = #{DUAN_YI_TIAN_JI},
 			DUAN_YI_TIAN_JI_IMG = #{DUAN_YI_TIAN_JI_IMG},
 			MAIN_IDEA = #{MAIN_IDEA},
-			STORY = #{STORY},
-			CREATE_TIME = #{CREATE_TIME},
-			UPDATE_TIME = #{UPDATE_TIME},
-		EASYBOOKGUA_ID = EASYBOOKGUA_ID
+			STORY = #{STORY} 
 		where 
-		EASYBOOKGUA_ID = #{EASYBOOKGUA_ID}
+		ID = #{ID}
 	</update>
 	
 	<!-- 通过ID获取数据 -->
@@ -113,7 +108,7 @@
 		from 
 		<include refid="tableName"></include>
 		where 
-			EASYBOOKGUA_ID = #{EASYBOOKGUA_ID}
+			ID = #{ID}
 	</select>
 	
 	<!-- 列表 -->
@@ -148,7 +143,7 @@
 		delete from
 		<include refid="tableName"></include>
 		where 
-			EASYBOOKGUA_ID in
+			ID in
 		<foreach item="item" index="index" collection="array" open="(" separator="," close=")">
                  #{item}
 		</foreach>

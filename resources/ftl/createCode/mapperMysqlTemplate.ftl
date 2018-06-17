@@ -4,7 +4,7 @@
 	
 	<!--表名 -->
 	<sql id="tableName">
-		${tabletop}${objectNameUpper}
+		${faobject}
 	</sql>
 	
 	<!-- 字段 -->
@@ -12,7 +12,7 @@
 	<#list fieldList as var>
 		${var[0]},	
 	</#list>
-		${objectNameUpper}_ID
+		 ID
 	</sql>
 	
 	<!-- 字段值 -->
@@ -20,7 +20,7 @@
 	<#list fieldList as var>
 		${r"#{"}${var[0]}${r"}"},	
 	</#list>
-		${r"#{"}${objectNameUpper}_ID${r"}"}
+		${r"#{"}ID${r"}"}
 	</sql>
 	
 	<!-- 新增-->
@@ -39,7 +39,7 @@
 		delete from
 		<include refid="tableName"></include>
 		where 
-			${objectNameUpper}_ID = ${r"#{"}${objectNameUpper}_ID${r"}"}
+			ID = ${r"#{"}ID${r"}"}
 	</delete>
 	
 	<!-- 修改 -->
@@ -52,9 +52,9 @@
 			${var[0]} = ${r"#{"}${var[0]}${r"}"},
 		</#if>
 	</#list>
-		${objectNameUpper}_ID = ${objectNameUpper}_ID
+		ID = ID
 		where 
-		${objectNameUpper}_ID = ${r"#{"}${objectNameUpper}_ID${r"}"}
+		ID = ${r"#{"}ID${r"}"}
 	</update>
 	
 	<!-- 通过ID获取数据 -->
@@ -64,7 +64,7 @@
 		from 
 		<include refid="tableName"></include>
 		where 
-			${objectNameUpper}_ID = ${r"#{"}${objectNameUpper}_ID${r"}"}
+			ID = ${r"#{"}ID${r"}"}
 	</select>
 	
 	<!-- 列表 -->
@@ -99,7 +99,7 @@
 		delete from
 		<include refid="tableName"></include>
 		where 
-			${objectNameUpper}_ID in
+			ID in
 		<foreach item="item" index="index" collection="array" open="(" separator="," close=")">
                  ${r"#{item}"}
 		</foreach>
