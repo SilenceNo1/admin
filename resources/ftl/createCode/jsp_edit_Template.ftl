@@ -28,7 +28,7 @@
 					<div class="col-xs-12">
 					
 					<form action="${objectNameLower}/${r"${msg }"}.do" name="Form" id="Form" method="post">
-						<input type="hidden" name="${objectNameUpper}_ID" id="${objectNameUpper}_ID" value="${r"${pd."}${objectNameUpper}_ID${r"}"}"/>
+						<input type="hidden" name="ID" id="ID" value="${r"${pd."}ID${r"}"}"/>
 						<div id="zhongxin" style="padding-top: 13px;">
 						<table id="table_report" class="table table-striped table-bordered table-hover">
 				<#list fieldList as var>

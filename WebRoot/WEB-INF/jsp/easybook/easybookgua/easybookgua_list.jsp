@@ -67,24 +67,11 @@
 									<label class="pos-rel"><input type="checkbox" class="ace" id="zcheckbox" /><span class="lbl"></span></label>
 									</th>
 									<th class="center" style="width:50px;">序号</th>
-									<th class="center">id</th>
 									<th class="center">gua_code</th>
 									<th class="center">name</th>
 									<th class="center">title</th>
 									<th class="center">quick_judge_img</th>
 									<th class="center">title_img</th>
-									<th class="center">origin_content</th>
-									<th class="center">explain_content</th>
-									<th class="center">picture_content</th>
-									<th class="center">explain_picture_content</th>
-									<th class="center">modern_explain_content</th>
-									<th class="center">modern_explain_picture_content</th>
-									<th class="center">enlightenment</th>
-									<th class="center">modern_explain_gua</th>
-									<th class="center">duan_yi_tian_ji</th>
-									<th class="center">duan_yi_tian_ji_img</th>
-									<th class="center">main_idea</th>
-									<th class="center">story</th>
 									<th class="center">create_time</th>
 									<th class="center">update_time</th>
 									<th class="center">操作</th>
@@ -99,27 +86,14 @@
 									<c:forEach items="${varList}" var="var" varStatus="vs">
 										<tr>
 											<td class='center'>
-												<label class="pos-rel"><input type='checkbox' name='ids' value="${var.EASYBOOKGUA_ID}" class="ace" /><span class="lbl"></span></label>
+												<label class="pos-rel"><input type='checkbox' name='ids' value="${var.ID}" class="ace" /><span class="lbl"></span></label>
 											</td>
 											<td class='center' style="width: 30px;">${vs.index+1}</td>
-											<td class='center'>${var.ID}</td>
 											<td class='center'>${var.GUA_CODE}</td>
 											<td class='center'>${var.NAME}</td>
 											<td class='center'>${var.TITLE}</td>
-											<td class='center'>${var.QUICK_JUDGE_IMG}</td>
-											<td class='center'>${var.TITLE_IMG}</td>
-											<td class='center'>${var.ORIGIN_CONTENT}</td>
-											<td class='center'>${var.EXPLAIN_CONTENT}</td>
-											<td class='center'>${var.PICTURE_CONTENT}</td>
-											<td class='center'>${var.EXPLAIN_PICTURE_CONTENT}</td>
-											<td class='center'>${var.MODERN_EXPLAIN_CONTENT}</td>
-											<td class='center'>${var.MODERN_EXPLAIN_PICTURE_CONTENT}</td>
-											<td class='center'>${var.ENLIGHTENMENT}</td>
-											<td class='center'>${var.MODERN_EXPLAIN_GUA}</td>
-											<td class='center'>${var.DUAN_YI_TIAN_JI}</td>
-											<td class='center'>${var.DUAN_YI_TIAN_JI_IMG}</td>
-											<td class='center'>${var.MAIN_IDEA}</td>
-											<td class='center'>${var.STORY}</td>
+											<td class='center'><img src="http://easybook.oss-cn-beijing.aliyuncs.com/${var.QUICK_JUDGE_IMG}" width="100px;" height="100px;"></img></td>
+											<td class='center'><img src="http://easybook.oss-cn-beijing.aliyuncs.com/${var.TITLE_IMG}" width="100px;" height="100px;"></img></td>
 											<td class='center'>${var.CREATE_TIME}</td>
 											<td class='center'>${var.UPDATE_TIME}</td>
 											<td class="center">
@@ -128,12 +102,12 @@
 												</c:if>
 												<div class="hidden-sm hidden-xs btn-group">
 													<c:if test="${QX.edit == 1 }">
-													<a class="btn btn-xs btn-success" title="编辑" onclick="edit('${var.EASYBOOKGUA_ID}');">
+													<a class="btn btn-xs btn-success" title="编辑" onclick="edit('${var.ID}');">
 														<i class="ace-icon fa fa-pencil-square-o bigger-120" title="编辑"></i>
 													</a>
 													</c:if>
 													<c:if test="${QX.del == 1 }">
-													<a class="btn btn-xs btn-danger" onclick="del('${var.EASYBOOKGUA_ID}');">
+													<a class="btn btn-xs btn-danger" onclick="del('${var.ID}');">
 														<i class="ace-icon fa fa-trash-o bigger-120" title="删除"></i>
 													</a>
 													</c:if>
@@ -147,7 +121,7 @@
 														<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
 															<c:if test="${QX.edit == 1 }">
 															<li>
-																<a style="cursor:pointer;" onclick="edit('${var.EASYBOOKGUA_ID}');" class="tooltip-success" data-rel="tooltip" title="修改">
+																<a style="cursor:pointer;" onclick="edit('${var.ID}');" class="tooltip-success" data-rel="tooltip" title="修改">
 																	<span class="green">
 																		<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
 																	</span>
@@ -156,7 +130,7 @@
 															</c:if>
 															<c:if test="${QX.del == 1 }">
 															<li>
-																<a style="cursor:pointer;" onclick="del('${var.EASYBOOKGUA_ID}');" class="tooltip-error" data-rel="tooltip" title="删除">
+																<a style="cursor:pointer;" onclick="del('${var.ID}');" class="tooltip-error" data-rel="tooltip" title="删除">
 																	<span class="red">
 																		<i class="ace-icon fa fa-trash-o bigger-120"></i>
 																	</span>
@@ -318,7 +292,7 @@
 			bootbox.confirm("确定要删除吗?", function(result) {
 				if(result) {
 					top.jzts();
-					var url = "<%=basePath%>easybookgua/delete.do?EASYBOOKGUA_ID="+Id+"&tm="+new Date().getTime();
+					var url = "<%=basePath%>easybookgua/delete.do?ID="+Id+"&tm="+new Date().getTime();
 					$.get(url,function(data){
 						nextPage(${page.currentPage});
 					});
@@ -332,7 +306,7 @@
 			 var diag = new top.Dialog();
 			 diag.Drag=true;
 			 diag.Title ="编辑";
-			 diag.URL = '<%=basePath%>easybookgua/goEdit.do?EASYBOOKGUA_ID='+Id;
+			 diag.URL = '<%=basePath%>easybookgua/goEdit.do?ID='+Id;
 			 diag.Width = 450;
 			 diag.Height = 355;
 			 diag.Modal = true;				//有无遮罩窗口
