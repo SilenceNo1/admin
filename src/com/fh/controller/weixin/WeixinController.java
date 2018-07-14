@@ -42,6 +42,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.fh.controller.base.BaseController;
+import com.fh.controller.easybook.CoinRadomAlgorithm;
 import com.fh.service.weixin.command.CommandService;
 import com.fh.service.weixin.imgmsg.ImgmsgService;
 import com.fh.service.weixin.textmsg.TextmsgService;
@@ -273,6 +274,12 @@ public class WeixinController extends BaseController {
 							}
 							// mit.setFuncFlag("0");
 							session.callback(mit);
+						}else if (getmsg.contains("卜")||getmsg.contains("算挂")||getmsg.contains("算命")) {
+							Msg4Text rmsg = new Msg4Text();
+							rmsg.setFromUserName(toUserName);
+							rmsg.setToUserName(fromUserName);
+							rmsg.setContent(CoinRadomAlgorithm.run());
+							session.callback(rmsg);
 						} else {
 							msgpd = commandService.findByKw(pd);
 							if (null != msgpd) {

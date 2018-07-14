@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
+import com.alibaba.fastjson.JSONArray;
+
 /**
  * 
  * @author silence 最简单的起卦法金钱卦用蓍草来布卦，通过三演十八变才得到一卦，不但浪费时间，还不易掌握。
@@ -38,8 +40,12 @@ public class CoinRadomAlgorithm {
 	 * 
 	 * 
 	 */
-
 	public static void main(String[] args) {
+		run();
+	}
+
+	public static String run() {
+		JSONArray result = new JSONArray();
 		int firstCoin = new Random().nextInt(2);
 		int secondCoin = new Random().nextInt(2);
 		int thirdCoin = new Random().nextInt(2);
@@ -101,8 +107,7 @@ public class CoinRadomAlgorithm {
 		gua.put(4, fourYao);
 		gua.put(5, fiveYao);
 		gua.put(6, sixYao);
-		System.out.println(
-				"bianGuaCode" + firstCoin % 2 + secondYao % 2 + thirdYao % 2 + fourYao % 2 + fiveYao % 2 + sixYao % 2);
+		result.add("变卦" + firstYao % 2 + secondYao % 2 + thirdYao % 2 + fourYao % 2 + fiveYao % 2 + sixYao % 2);
 
 		if (firstYao == 2) {
 			firstYao = 1;
@@ -145,8 +150,7 @@ public class CoinRadomAlgorithm {
 		System.out.println("fiveYao:" + fiveYao);
 		System.out.println("sixYao:" + sixYao);
 
-		System.out.println(
-				"zhuGuaCode" + firstCoin % 2 + secondYao % 2 + thirdYao % 2 + fourYao % 2 + fiveYao % 2 + sixYao % 2);
+		result.add("主卦" + firstCoin % 2 + secondYao % 2 + thirdYao % 2 + fourYao % 2 + fiveYao % 2 + sixYao % 2);
 		int situation = 0;
 		Map<Integer, Integer> bianYao = new HashMap<>();
 		Map<Integer, Integer> buBianYao = new HashMap<>();
@@ -165,29 +169,29 @@ public class CoinRadomAlgorithm {
 		System.out.println(situation);
 
 		if (situation == 0) {
-			System.out.println("六爻不变：卦中六个爻都不是变爻，这叫“静卦”，用本卦的卦辞解卦");
+			result.add("六爻不变：卦中六个爻都不是变爻，这叫“静卦”，用本卦的卦辞解卦");
 		} else if (situation == 1) {
 			for (Map.Entry<Integer, Integer> entry : bianYao.entrySet()) {
-				System.out.println("一个爻变：卦中有一个变爻，就用这个变爻的爻辞解卦。第" + entry.getKey() + "爻" + entry.getValue());
+				result.add("一个爻变：卦中有一个变爻，就用这个变爻的爻辞解卦。第" + entry.getKey() + "爻" + entry.getValue());
 			}
 		} else if (situation == 2) {
 			for (Map.Entry<Integer, Integer> entry : bianYao.entrySet()) {
-				System.out.println("二个爻变：卦中有两个变爻，用这两个变爻的爻辞解卦，以上爻为主。第" + entry.getKey() + "爻" + entry.getValue());
+				result.add("二个爻变：卦中有两个变爻，用这两个变爻的爻辞解卦，以上爻为主。第" + entry.getKey() + "爻" + entry.getValue());
 			}
 		} else if (situation == 3) {
 			for (Map.Entry<Integer, Integer> entry : bianYao.entrySet()) {
-				System.out.println("三个爻变：卦中有三个变爻，用本卦卦辞结合变卦卦辞作综合考虑。第" + entry.getKey() + "爻" + entry.getValue());
+				result.add("三个爻变：卦中有三个变爻，用本卦卦辞结合变卦卦辞作综合考虑。第" + entry.getKey() + "爻" + entry.getValue());
 			}
 		} else if (situation == 4) {
 			for (Map.Entry<Integer, Integer> entry : buBianYao.entrySet()) {
-				System.out.println("四个爻变：卦中有四个变爻，用另外两个静爻的爻辞解卦，并以下爻爻辞为主。第" + entry.getKey() + "爻" + entry.getValue());
+				result.add("四个爻变：卦中有四个变爻，用另外两个静爻的爻辞解卦，并以下爻爻辞为主。第" + entry.getKey() + "爻" + entry.getValue());
 			}
 		} else if (situation == 5) {
 			for (Map.Entry<Integer, Integer> entry : buBianYao.entrySet()) {
-				System.out.println("五个爻变：卦中有五个变爻，用变卦的静爻爻辞解卦。第" + entry.getKey() + "爻" + entry.getValue());
+				result.add("五个爻变：卦中有五个变爻，用变卦的静爻爻辞解卦。第" + entry.getKey() + "爻" + entry.getValue());
 			}
 		} else if (situation == 6) {
-			System.out.println("六爻皆变：如果是乾、坤两卦就用用九、用六的爻辞解卦，其他卦则用变卦的卦辞解卦。");
+			result.add("六爻皆变：如果是乾、坤两卦就用用九、用六的爻辞解卦，其他卦则用变卦的卦辞解卦。");
 		}
 		/**
 		 * * 根据这种方法得到一个卦后，我们就可以根据下一章中的内容占断吉凶了
@@ -198,6 +202,7 @@ public class CoinRadomAlgorithm {
 		 * 5.四个爻变：卦中有四个变爻，用另外两个静爻的爻辞解卦，并以下爻爻辞为主。 6. 五个爻变：卦中有五个变爻，用变卦的静爻爻辞解卦。
 		 * 7.六爻皆变：如果是乾、坤两卦就用用九、用六的爻辞解卦，其他卦则用变卦的卦辞解卦。
 		 */
-
+		System.out.println(result.toJSONString());
+		return result.toJSONString();
 	}
 }
