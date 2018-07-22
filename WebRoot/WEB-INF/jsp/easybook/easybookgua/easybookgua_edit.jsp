@@ -159,8 +159,7 @@
 		$(top.hangge());
 		
 		function upPhoto(fileId,inputId){
-		    var url = "<%=basePath%>
-		gua/upPhoto.do";//这里填请求的地址
+		    var url = "<%=basePath%>gua/upPhoto.do";//这里填请求的地址
 			var formData = new FormData();
 			formData.append("file", $("#" + fileId)[0].files[0]);
 			$.ajax({

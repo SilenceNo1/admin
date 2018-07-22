@@ -328,8 +328,8 @@
 					var str = '';
 					for(var i=0;i < document.getElementsByName('ids').length;i++){
 					  if(document.getElementsByName('ids')[i].checked){
-					  	if(str=='') str += document.getElementsByName('ids')[i].value;
-					  	else str += ',' + document.getElementsByName('ids')[i].value;
+					  	if(str=='') {str += document.getElementsByName('ids')[i].value;}
+					  	else {str += ',' + document.getElementsByName('ids')[i].value;}
 					  }
 					}
 					if(str==''){
