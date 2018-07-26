@@ -46,12 +46,6 @@
 											<td><input type="text" name="TITLE" id="TITLE" value="${pd.TITLE}" maxlength="255" placeholder="这里输入title" title="title" style="width: 98%;" /></td>
 										</tr>
 										<tr>
-											<td style="width: 75px; text-align: right; padding-top: 13px;">运势速断:</td>
-											<td><input type="hidden" name="QUICK_JUDGE_IMG" id="QUICK_JUDGE_IMG" value="${pd.QUICK_JUDGE_IMG}" /> <input type="file"
-												onchange="upPhoto('QUICK_JUDGE_IMG_FILE','QUICK_JUDGE_IMG')" name="QUICK_JUDGE_IMG_FILE" id="QUICK_JUDGE_IMG_FILE" maxlength="255"
-												placeholder="这里输入quick_judge_img" title="quick_judge_img" style="width: 98%;" /></td>
-										</tr>
-										<tr>
 											<td style="width: 75px; text-align: right; padding-top: 13px;">挂图:</td>
 
 											<td><input type="hidden" name="TITLE_IMG" id="TITLE_IMG" value="${pd.TITLE_IMG}" /> <input type="file" onchange="upPhoto('TITLE_IMG_FILE','TITLE_IMG')"
@@ -88,16 +82,6 @@
 												maxlength="255" placeholder="这里输入modern_explain_picture_content" title="modern_explain_picture_content" style="width: 98%;" /></td>
 										</tr>
 										<tr>
-											<td style="width: 75px; text-align: right; padding-top: 13px;">启示:</td>
-											<td><input type="text" name="ENLIGHTENMENT" id="ENLIGHTENMENT" value="${pd.ENLIGHTENMENT}" maxlength="255" placeholder="这里输入enlightenment"
-												title="enlightenment" style="width: 98%;" /></td>
-										</tr>
-										<tr>
-											<td style="width: 75px; text-align: right; padding-top: 13px;">卦辞说:</td>
-											<td><input type="text" name="MODERN_EXPLAIN_GUA" id="MODERN_EXPLAIN_GUA" value="${pd.MODERN_EXPLAIN_GUA}" maxlength="255"
-												placeholder="这里输入modern_explain_gua" title="modern_explain_gua" style="width: 98%;" /></td>
-										</tr>
-										<tr>
 											<td style="width: 75px; text-align: right; padding-top: 13px;">断易天机:</td>
 											<td><input type="text" name="DUAN_YI_TIAN_JI" id="DUAN_YI_TIAN_JI" value="${pd.DUAN_YI_TIAN_JI}" maxlength="255" placeholder="这里输入duan_yi_tian_ji"
 												title="duan_yi_tian_ji" style="width: 98%;" /></td>
@@ -117,10 +101,29 @@
 											<td style="width: 75px; text-align: right; padding-top: 13px;">典故:</td>
 											<td><input type="text" name="STORY" id="STORY" value="${pd.STORY}" maxlength="255" placeholder="这里输入story" title="story" style="width: 98%;" /></td>
 										</tr>
+										
+										<tr>
+											<td style="width: 75px; text-align: right; padding-top: 13px;">启示:</td>
+											<td><input type="text" name="ENLIGHTENMENT" id="ENLIGHTENMENT" value="${pd.ENLIGHTENMENT}" maxlength="255" placeholder="这里输入enlightenment"
+												title="enlightenment" style="width: 98%;" /></td>
+										</tr>
+										<tr>
+											<td style="width: 75px; text-align: right; padding-top: 13px;">启示第二,三段:</td>
+											<td><input type="text" name="MODERN_EXPLAIN_GUA" id="MODERN_EXPLAIN_GUA" value="${pd.MODERN_EXPLAIN_GUA}" maxlength="255"
+												placeholder="这里输入modern_explain_gua" title="modern_explain_gua" style="width: 98%;" /></td>
+										</tr>
+										
+										<tr>
+											<td style="width: 75px; text-align: right; padding-top: 13px;">运势速断:</td>
+											<td><input type="hidden" name="QUICK_JUDGE_IMG" id="QUICK_JUDGE_IMG" value="${pd.QUICK_JUDGE_IMG}" /> <input type="file"
+												onchange="upPhoto('QUICK_JUDGE_IMG_FILE','QUICK_JUDGE_IMG')" name="QUICK_JUDGE_IMG_FILE" id="QUICK_JUDGE_IMG_FILE" maxlength="255"
+												placeholder="这里输入quick_judge_img" title="quick_judge_img" style="width: 98%;" /></td>
+										</tr>
 										<tr>
 											<td style="text-align: center;" colspan="10"><a class="btn btn-mini btn-primary" onclick="save();">保存</a> <a class="btn btn-mini btn-danger"
 												onclick="top.Dialog.close();">取消</a></td>
 										</tr>
+										
 									</table>
 								</div>
 								<div id="zhongxin2" class="center" style="display: none">
@@ -159,8 +162,7 @@
 		$(top.hangge());
 		
 		function upPhoto(fileId,inputId){
-		    var url = "<%=basePath%>
-		gua/upPhoto.do";//这里填请求的地址
+		    var url = "<%=basePath%>gua/upPhoto.do";//这里填请求的地址
 			var formData = new FormData();
 			formData.append("file", $("#" + fileId)[0].files[0]);
 			$.ajax({

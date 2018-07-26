@@ -202,7 +202,12 @@ public class CoinRadomAlgorithm {
 		 * 5.四个爻变：卦中有四个变爻，用另外两个静爻的爻辞解卦，并以下爻爻辞为主。 6. 五个爻变：卦中有五个变爻，用变卦的静爻爻辞解卦。
 		 * 7.六爻皆变：如果是乾、坤两卦就用用九、用六的爻辞解卦，其他卦则用变卦的卦辞解卦。
 		 */
-		System.out.println(result.toJSONString());
-		return result.toJSONString();
+		
+		String resultStr = "";
+		for (Object object : result) {
+			resultStr +=object.toString()+"\n";
+		}
+		System.out.println(resultStr);
+		return resultStr;
 	}
 }
