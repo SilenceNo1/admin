@@ -150,7 +150,7 @@ public class CoinRadomAlgorithm {
 		System.out.println("fiveYao:" + fiveYao);
 		System.out.println("sixYao:" + sixYao);
 
-		result.add("主卦" + firstCoin % 2 + secondYao % 2 + thirdYao % 2 + fourYao % 2 + fiveYao % 2 + sixYao % 2);
+		result.add("主卦" + firstYao % 2 + secondYao % 2 + thirdYao % 2 + fourYao % 2 + fiveYao % 2 + sixYao % 2);
 		int situation = 0;
 		Map<Integer, Integer> bianYao = new HashMap<>();
 		Map<Integer, Integer> buBianYao = new HashMap<>();
