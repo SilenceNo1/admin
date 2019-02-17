@@ -4,14 +4,13 @@ import java.io.PrintWriter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import javax.annotation.Resource;
 
-import org.apache.commons.lang.time.DateUtils;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.WebDataBinder;
@@ -20,15 +19,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.aliyun.oss.common.utils.DateUtil;
 import com.fh.controller.base.BaseController;
 import com.fh.entity.Page;
+import com.fh.service.easybook.easybookgua.EasyBookGuaManager;
 import com.fh.util.AppUtil;
+import com.fh.util.Jurisdiction;
 import com.fh.util.ObjectExcelView;
 import com.fh.util.PageData;
-import com.fh.util.Jurisdiction;
 import com.fh.util.Tools;
-import com.fh.service.easybook.easybookgua.EasyBookGuaManager;
 
 /** 
  * 说明：挂

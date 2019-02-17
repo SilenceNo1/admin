@@ -42,7 +42,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.fh.controller.base.BaseController;
-import com.fh.controller.easybook.CoinRadomAlgorithm;
+import com.fh.service.easybook.easybookgua.impl.EasyBookGuaService;
 import com.fh.service.weixin.command.CommandService;
 import com.fh.service.weixin.imgmsg.ImgmsgService;
 import com.fh.service.weixin.textmsg.TextmsgService;
@@ -70,6 +70,9 @@ public class WeixinController extends BaseController {
 	private CommandService commandService;
 	@Resource(name = "imgmsgService")
 	private ImgmsgService imgmsgService;
+	
+	@Resource(name = "easybookguaService")
+	private EasyBookGuaService easybookguaService;
 
 	/**
 	 * 接口验证,总入口
@@ -278,7 +281,7 @@ public class WeixinController extends BaseController {
 							Msg4Text rmsg = new Msg4Text();
 							rmsg.setFromUserName(toUserName);
 							rmsg.setToUserName(fromUserName);
-							rmsg.setContent(new CoinRadomAlgorithm().run());
+							rmsg.setContent(easybookguaService.run());
 							session.callback(rmsg);
 						} else {
 							msgpd = commandService.findByKw(pd);
