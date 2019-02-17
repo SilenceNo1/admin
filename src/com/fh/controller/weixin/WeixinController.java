@@ -278,7 +278,7 @@ public class WeixinController extends BaseController {
 							Msg4Text rmsg = new Msg4Text();
 							rmsg.setFromUserName(toUserName);
 							rmsg.setToUserName(fromUserName);
-							rmsg.setContent(CoinRadomAlgorithm.run());
+							rmsg.setContent(new CoinRadomAlgorithm().run());
 							session.callback(rmsg);
 						} else {
 							msgpd = commandService.findByKw(pd);
