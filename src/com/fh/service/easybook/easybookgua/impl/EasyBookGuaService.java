@@ -69,7 +69,13 @@ public class EasyBookGuaService implements EasyBookGuaManager{
 	public PageData findById(PageData pd)throws Exception{
 		return (PageData)dao.findForObject("EasyBookGuaMapper.findById", pd);
 	}
-	
+	/**通过gua_code获取数据
+	 * @param pd
+	 * @throws Exception
+	 */
+	public PageData findByCode(PageData pd)throws Exception{
+		return (PageData)dao.findForObject("EasyBookGuaMapper.findByCode", pd);
+	}
 	/**批量删除
 	 * @param ArrayDATA_IDS
 	 * @throws Exception

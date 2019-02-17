@@ -274,7 +274,7 @@ public class WeixinController extends BaseController {
 							}
 							// mit.setFuncFlag("0");
 							session.callback(mit);
-						}else if (getmsg.contains("卜")||getmsg.contains("算挂")||getmsg.contains("算命")) {
+						}else if (getmsg.contains("占")||getmsg.contains("卜")||getmsg.contains("算挂")||getmsg.contains("算命")) {
 							Msg4Text rmsg = new Msg4Text();
 							rmsg.setFromUserName(toUserName);
 							rmsg.setToUserName(fromUserName);

@@ -110,6 +110,15 @@
 		where 
 			ID = #{ID}
 	</select>
+	<!-- 通过ID获取数据 -->
+	<select id="findByCode" parameterType="pd" resultType="pd">
+		select 
+		<include refid="Field"></include>
+		from 
+		<include refid="tableName"></include>
+		where 
+			gua_code = #{gua_code}
+	</select>
 	
 	<!-- 列表 -->
 	<select id="datalistPage" parameterType="page" resultType="pd">
